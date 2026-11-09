@@ -1,0 +1,10 @@
+{
+  "retrieved_on": "2026-11-09",
+  "archive_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+  "archive_sha256": "81977a834f5cfd5302c37181ede34d2663eeea60604d1d89230e3c5e74b9a4bb",
+  "unmodified_vendor_files": {
+    "ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+    "acmart.cls": "cb641fdfe8a6b9bbe171a0794218657c737c4b622c584dab09115a9e269eb296"
+  },
+  "notes": "acmart v2.21 (2026/11/01), class generated unmodified from official CTAN acmart.dtx using acmart.ins; sources retained under template-source."
+}

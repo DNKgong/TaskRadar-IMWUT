@@ -1,0 +1,22 @@
+\section{Problem Definition and System Requirements}
+\label{sec:problem}
+Given $\calS_t=\{S_{t-H},\ldots,S_t\}$, metadata $m$, request $q$, point budget $B$, and latency cap $L$, output a task point cloud $P_q$, requested quantity $\widehat y_q$, and calibrated error estimate $r_q$. Define $q$ through target objects, quantities, reference relations, time target, and tolerance. Do not provide the true activity or target state through the prompt.
+
+\paragraph{R1: Measurement usefulness.}
+Points should support the requested quantity with measured geometric fidelity. Compare with direct radar-to-task prediction, which may be sufficient when no reusable geometry is needed.
+
+\paragraph{R2: Stable world interpretation.}
+Pure requests control resources and representation, not object existence or physical state. Evaluate geometry consistency across task changes.
+
+\paragraph{R3: Causal and bounded operation.}
+Retrieve only observations already acquired. Count buffer access, encoding, language inference, hypotheses, motion alignment, and decoding in the budget. Initially do not wait for future observations.
+
+\paragraph{R4: Honest unresolved outputs.}
+Calibrate error risk and preserve intervals or coherent alternatives when evidence is insufficient. Compare at matched coverage to avoid artificial accuracy from rejecting difficult cases.
+
+\paragraph{Operational ambiguity.}
+For hypotheses $\{X^{(k)},w_k\}$ and goal $g_q$, estimate
+\begin{equation}
+\widehat R_q=\min_a\sum_k w_k\ell_q(a,g_q(X^{(k)})).
+\end{equation}
+Interpret this as modeled task disagreement. Finite candidates can miss modes, so actual-error calibration is essential.

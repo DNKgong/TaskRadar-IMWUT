@@ -1,0 +1,14 @@
+\section{Background and Application Scope}
+\label{sec:background}
+\subsection{Radar Processing and Geometric Output}
+Introduce range/Doppler/angle processing, CFAR, and learning-based generation. State the exact available representation for each device. Use
+\begin{equation}
+S_\tau=\mathcal F(X_\tau,\eta_\tau;m)+\epsilon_\tau
+\end{equation}
+to distinguish scene geometry/motion, scattering nuisance variables, and sensor configuration. Generated surface points are a geometric representation, not automatically measured scatterers.
+
+\subsection{Indoor Sensing and Automotive Perception}
+Indoor tasks emphasize local nonrigid motion and references such as torso, ground, or supporting furniture. Automotive tasks emphasize multiple objects, long-range sparsity, ego motion, and road context. Both require task-relevant density and can be harmed by unsupported completion. The common abstraction is evidence and geometry allocation across scene, instance, and relation scales.
+
+\subsection{Tasks, Tolerances, and Uncertainty}
+Define requested quantities rather than action names alone. Position goal-oriented uncertainty as a foundation~\cite{goalved2023}. Spatial uncertainty, model uncertainty, and task error are related but distinct. A learned low-risk output is not a physical or application-safety certificate.

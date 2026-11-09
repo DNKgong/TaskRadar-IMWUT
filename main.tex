@@ -1,0 +1,35 @@
+% ACM Large single-column journal style; recheck current IMWUT instructions before submission.
+\documentclass[acmlarge,review,anonymous,nonacm]{acmart}
+\acmJournal{IMWUT}
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+% Writing draft: nonacm suppresses unassigned publication metadata.
+% Remove nonacm and apply the current journal requirements before submission.
+\acmDOI{}
+\input{preamble}
+\input{metadata}
+\begin{document}
+\input{sections/00_abstract}
+\keywords{millimeter-wave radar, task-adaptive sensing, point cloud generation, vision-language models, temporal evidence}
+\maketitle
+\draftnote{Research outline. Results, participant counts, deployment duration, and performance values are not yet available. This is an alternative presentation of the same system as the ICCV project; only one venue will be selected.}
+\input{sections/01_introduction}
+\input{sections/02_background}
+\input{sections/03_motivating_study}
+\input{sections/04_problem_and_requirements}
+\input{sections/05_challenges}
+\input{sections/06_system_design}
+\input{sections/07_implementation}
+\input{sections/08_evaluation_methodology}
+\input{sections/09_evaluation_questions}
+\input{sections/10_case_studies}
+\input{sections/11_related_work}
+\input{sections/12_discussion}
+\input{sections/13_conclusion}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+% Optional appendices remain separate at outline stage.
+% \appendix
+% \input{sections/A_reproducibility}
+\end{document}

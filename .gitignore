@@ -1,0 +1,21 @@
+# LaTeX build artifacts. Do not ignore figure PDFs or bibliography sources.
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.run.xml
+*.bcf
+*.xdv
+/main.pdf
+/build/
+/build-console.txt
+.DS_Store
+Thumbs.db

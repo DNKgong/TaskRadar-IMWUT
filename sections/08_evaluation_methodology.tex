@@ -1,0 +1,15 @@
+\section{Evaluation Methodology}
+\label{sec:methodology}
+\subsection{Primary Indoor Study}
+Evaluate localization, joint position/angle, and motion amplitude as supported by verified annotations. Report subject and sequence coverage after the data audit. Use subject/sequence-disjoint splits and separate environment shifts; prevent neighboring frames from leaking across partitions.
+
+\subsection{Automotive Extension}
+Select one detection benchmark with feasible radar input and object labels. Report performance by range, target type, and sparse/occluded conditions when annotated. Reuse architecture and interfaces; train separately initially. A small qualitative demonstration alone does not support cross-domain generality.
+
+\subsection{Baselines and Matched Resources}
+Include signal processing, generic radar-conditioned generation, task-driven densification, generic generation plus task sampling, and direct tensor-to-task models with uncertainty. Use mmPC/OmniPC and learned methods only where their input requirements can be satisfied. Document reimplementations and missing-input differences.
+
+Match output count, processed history, supervision, additional attributes, hardware, and total computation where possible. Compare at equal coverage when methods abstain. Do not compare automotive AP numerically with indoor angle error.
+
+\subsection{Metrics and Statistics}
+Report task error/AP, geometric error, risk calibration, interval coverage/width, risk--coverage, latency distributions, memory, and adaptation cost. Use independent subjects or sequences as statistical units; report seeds and confidence intervals. Keep exploratory development separate from final held-out tests.

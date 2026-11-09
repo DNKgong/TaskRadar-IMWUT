@@ -1,0 +1,21 @@
+\section{Introduction}
+\label{sec:introduction}
+\paragraph{Deployment motivation.}
+Describe one radar front end serving localization, movement measurement, and pose-related applications. The useful output changes with the application. Expand the motivation to automotive perception, where the same allocation problem occurs across target instances, ranges, and scene context. Do not assume every background reflection is irrelevant or every automotive region needs equal density.
+
+\paragraph{Why a fixed representation is insufficient to assume.}
+Existing processing and learning methods improve generic point quality~\cite{mmpc2025,omnipc2026,rald2026,mmwaveflow2026}. Our measurement study will determine when their output allocation fails to match application demands. The system question is how to expose application needs to a radar front end without retraining an unrelated full pipeline for each request.
+
+\paragraph{Key insight.}
+The geometry missing from a frame is not equally important for every task. The same observations can support localization but leave a joint angle or distant-target interpretation unresolved. Historical evidence has task-dependent value and age. Increasing density cannot substitute for evidence that is absent.
+
+\paragraph{System overview and intended value.}
+\TaskRadar{} accepts a supported language measurement request, compiles its targets and reference relations, estimates residual task risk, and selects buffered evidence and point refinement within a resource budget. An application receives points plus interpretable risk information. A cached goal representation may reduce recurring language-model cost, but real timing must be measured.
+
+\paragraph{Proposed contributions.}
+\begin{itemize}
+\item A measurement study of task-dependent geometry, evidence age, and representation budgets in radar sensing.
+\item A shared task-adaptive sensing front end combining executable goals, motion-aware memory, risk estimation, and constrained point decoding.
+\item An evaluation of task adaptation, deployment robustness, and complete system cost, emphasizing indoor sensing with an automotive extension.
+\end{itemize}
+\draftnote{Replace planned contributions with supported findings. A user study or a longitudinal deployment is not assumed or promised without a suitable research question and resources.}

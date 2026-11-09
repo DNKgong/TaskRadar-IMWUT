@@ -1,0 +1,16 @@
+\section{Motivating Measurement Study}
+\label{sec:motivation}
+\subsection{Study Questions and Controls}
+Test three hypotheses: geometry disagreement does not affect every task equally; the best useful history depends on motion and task; and geometric reference coverage can matter more than local point count. Begin with existing calibrated datasets. New collection remains optional and must specify sensors, participants, conditions, synchronization, and approvals before execution.
+
+\subsection{Task-Dependent Sufficiency}
+Compare human center location, joint position/angle, and movement amplitude on identical observations. Use calibrated geometry candidates and ground truth to measure actual errors. In the automotive extension, stratify detection/localization by distance and target type. Establish observation similarity explicitly rather than assuming visually similar motions have equivalent radar returns.
+
+\subsection{Evidence Age and Motion}
+Sweep causal buffer length, motion-compensation strategy, and retrieval policy at matched resources. Measure fast-motion errors, stale-point artifacts, and latency. Compare relevant history with shuffled or irrelevant history. More history is not pre-labeled as beneficial.
+
+\subsection{Point Allocation and Reference Structure}
+Compare uniform, target-part, relation-aware, and task-risk allocation under fixed point budgets. Use shoulder--elbow--wrist as an indoor example and distant target plus road context as an automotive example. Distinguish background suppression from removal of useful reference structures.
+
+\paragraph{Planned artifacts.}
+Present a paired-domain motivating example, task/history curves, and a density-versus-reference ablation. Each plot must contain measured outcomes with independent-sequence uncertainty, not illustrative invented values.

@@ -1,0 +1,20 @@
+\section{Evaluation Questions and Planned Results}
+\label{sec:evaluation}
+\paragraph{E1: Does task-dependent allocation improve application outcomes?}
+Plot task performance against point budget and full-system latency. Compare uniform, part-weighted, relation-aware, and risk-driven allocations. Verify geometry alongside task gains.
+
+\paragraph{E2: Does the system exploit fresh, relevant temporal evidence?}
+Compare current-frame, stacked history, ordinary attention, and motion-aware retrieval with matched history. Include fast/slow motion, shuffled time, irrelevant memory, and stale-association cases.
+
+\paragraph{E3: What does the VLM contribute?}
+Compare task IDs, rules, text encoders, text LLMs, and adapted VLMs using the same generator. Hold out target--quantity--budget combinations separately from paraphrases. Measure parsing correctness and final sensing error separately.
+
+\paragraph{E4: Are risk estimates useful under deployment changes?}
+Test true-error prediction, calibration, and coverage under environment and sensor shifts. Remove or attenuate relevant radar input. Low candidate spread must not be treated as sufficient evidence of low risk.
+
+\paragraph{E5: Are generated points reusable?}
+Evaluate downstream models not used in generator training and a direct radar-to-task baseline. Test whether geometry reuse reduces adaptation cost or whether direct prediction already meets the need.
+
+\paragraph{E6: What is the actual system overhead?}
+Measure startup, goal switching, steady-state inference, hypothesis overhead, memory, and end-to-end latency. Report all costs even when language conditions are cached.
+\draftnote{All result figures and tables are planned. Do not enter invented AP, angle, latency, energy, participant, or deployment values.}

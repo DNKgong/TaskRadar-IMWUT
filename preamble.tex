@@ -1,0 +1,9 @@
+% Project-owned macros; preserve the ACM class unchanged.
+% acmart already configures AMS math and newtxmath; avoid loading amssymb twice.
+\newcommand{\TaskRadar}{TaskRadar}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\calS}{\mathcal{S}}
+\newif\ifoutlinenotes
+\outlinenotestrue
+\newcommand{\draftnote}[1]{\ifoutlinenotes\par\noindent{\small\color{blue!55!black}\textbf{Outline note.} #1}\par\fi}
+\newcommand{\openissue}[1]{\draftnote{\textbf{To decide:} #1}}

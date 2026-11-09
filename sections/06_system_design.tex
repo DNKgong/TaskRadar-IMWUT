@@ -1,0 +1,22 @@
+\section{System Design}
+\label{sec:design}
+\subsection{Request Interface and Goal Cache}
+Use an adapted compact VLM and a structured goal schema. A request such as measuring left elbow angle expands to shoulder--elbow--wrist relations, current-time geometry, units, tolerance, and budgets. Validate supported operations; expose unsupported requests. Cache conditions for repeated goals, and separately measure initial, switching, and steady-state costs. Compare with a rule interface and text-only alternatives.
+
+\subsection{Task-Independent Evidence Memory}
+Store numerical radar tokens, physical coordinates, timestamps, sensor metadata, instance/part association, and alignment residuals. Preserve useful environmental reference structures. Build shared scene geometry hypotheses independently of pure task wording.
+
+\subsection{Motion-Aware Retrieval and Evidence Age}
+Associate local observations through learned motion constrained by radial velocity and scene geometry. Track age and propagation uncertainty. A task can request longer memory for a slow movement or discard stale evidence for a fast current-angle estimate; these behaviors must be learned or validated rather than prescribed as facts.
+
+\subsection{Task Risk and Action Selection}
+Compute hypothesis disagreement in requested quantities and calibrate against actual error. Select buffered retrieval, local refinement, or stopping through predicted risk reduction per measured cost. Begin with a finite action library and supervised action gains. Retrieval may expose unused data; extra generation steps reuse the same observations.
+
+\subsection{Hierarchical Point Generation}
+Allocate at scene, instance, and relation levels. Indoor decoding emphasizes target-internal articulation; automotive decoding emphasizes targets across distance and essential context. Decode variable-density points constrained by common geometry. Measurement reconstruction applies to the shared scene, not an incomplete task subset.
+
+\subsection{Output and Downstream Integration}
+Specify coordinates, optional attributes, point-level uncertainty, and task-risk metadata. Compare equal consumer interfaces. For ambiguous states return a representative cloud with a task interval or explicitly separate candidate clouds. Do not union incompatible hypotheses and call the result dense recovery.
+
+\paragraph{Closed-loop operation.}
+After each action, update evidence and task risk until the cap or stopping rule is reached. Validate risk reduction with real held-out error. VLM self-rating is not the primary feedback signal.

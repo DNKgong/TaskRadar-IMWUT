@@ -1,0 +1,13 @@
+\section{System Challenges}
+\label{sec:challenges}
+\paragraph{C1: Application intent and numerical measurements have different interfaces.}
+Language can specify an angle or movement range but must be compiled into supported entities, units, relations, and time targets. A VLM's semantic interpretation cannot certify measurement support.
+
+\paragraph{C2: Useful evidence is sparse, nonrigid, and temporary.}
+Radial Doppler alone cannot recover 3D motion. Indoor limbs require local association; driving requires ego/object association. Old evidence can become geometrically wrong even when its original measurement was accurate.
+
+\paragraph{C3: Point density competes with complete system resources.}
+More hypotheses, longer buffers, and finer generation incur costs not visible in final point count. Resource allocation must prioritize expected reduction of true task error.
+
+\paragraph{C4: Completion and confidence can reinforce the same wrong prior.}
+A generator and downstream model may agree on an unsupported structure. Preserve observation constraints, evaluate independent consumers, and calibrate on held-out truth and deployment shifts.

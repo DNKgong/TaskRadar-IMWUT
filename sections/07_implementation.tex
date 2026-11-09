@@ -1,0 +1,14 @@
+\section{Implementation Plan}
+\label{sec:implementation}
+\paragraph{Software and inference path.}
+Record generator, radar encoder, VLM, connector, runtime, and model versions. Prefer a minimal latent flow/diffusion backbone before architecture expansion. Define what runs on the sensor, host, edge device, or server; no on-device or real-time claim is made yet.
+
+\paragraph{Training sequence.}
+First establish geometric supervision and task-conditioned versus post-sampling baselines. Then train the supported language-goal interface and independently calibrate risk. Finally learn action gains from actual retrieval/refinement outcomes. Separate training, calibration, validation, and final testing.
+
+\paragraph{Sensor and data interface.}
+Audit numerical input axes, phase availability, coordinate conventions, synchronization, calibration, and timing. Distinguish fitted meshes from observed depth/LiDAR. The primary indoor candidates are RT-Pose and M4Human~\cite{rtpose2024,m4human2026}. The automotive dataset remains to be chosen based on raw-input access and labels.
+
+\paragraph{Resource logging.}
+Log acquisition history, processed tokens, candidate count, all generated queries/points, GPU memory, end-to-end latency, and task-switching overhead. Measure power only if suitable hardware instrumentation is available.
+\openissue{Hardware, sensor models, final datasets, task tolerances, and the language/generator checkpoints require pilot decisions. Their absence does not prevent compiling or editing this outline.}
